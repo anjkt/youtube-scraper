@@ -2,7 +2,7 @@ import requests
 import csv
 import json
 import pandas as pd
-from tqdm import tqdm
+
 #access_token for the api call
 access_token = "PUT your Access Token Here"
 
@@ -15,7 +15,7 @@ with open('videos-id.csv', mode='w', newline='') as generated_csv:
     generated_writer = csv.writer(generated_csv, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
     generated_writer.writerow(['Channel-ID', 'Video-IDs'])
     #initiate the for loop to iterate total channel_ids
-    for j in tqdm(range(len(df2))):
+    for j in range(len(df2)):
         channel_id = df2[j]
         #Hitting the API by channel ID
         url_address = "https://www.googleapis.com/youtube/v3/activities?part=snippet,contentDetails&channelId="+channel_id+"&key=" + access_token + "&maxResults=50"
