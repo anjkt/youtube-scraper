@@ -4,11 +4,12 @@ This a python program which scrapes out videos from channel using channel id. Us
 ## You can use it to gather data from your desired channels and get a full list of respective videos
 ### Complexity is n^2(n number of Channels and n number of videos)
 
-Dependencies Used:(pip install if missing)
-1)Requests
-2)CSV
-3)JSON
-4)Pandas
+## Dependencies Used:(pip install if missing)
+
+1) Requests
+2) CSV
+3) JSON
+4) Pandas
 
 
 ## How to configure
